@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="slw-cg-Eya">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="c2E-cN-SVz">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="slw-cg-Eya" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H2H-qi-zhn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9IZ-QJ-xf3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vsF-Vt-AGw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-231" y="479"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Menu" id="BYZ-38-t0r" customClass="ViewController" customModule="infiniteTiles" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infinite Tiles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9W-Ee-soR">
+                                <rect key="frame" x="193" y="169" width="215" height="58"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFC-Ni-11T">
+                                <rect key="frame" x="276" y="277" width="48" height="47"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="aZp-ru-Hd0" kind="show" id="NPb-SM-H9K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VFC-Ni-11T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8MX-8v-Ik6"/>
+                            <constraint firstItem="VFC-Ni-11T" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LY9-BV-ssB"/>
+                            <constraint firstItem="y9W-Ee-soR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vT0-Nb-kwd"/>
+                            <constraint firstItem="VFC-Ni-11T" firstAttribute="top" secondItem="y9W-Ee-soR" secondAttribute="bottom" constant="50" id="y8R-6U-zVx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WRx-H6-vl7"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="445" y="479"/>
+        </scene>
+        <!--Board-->
+        <scene sceneID="wXG-Jr-7Dp">
+            <objects>
+                <viewController title="Board" id="aZp-ru-Hd0" customClass="GameBoardViewController" customModule="infiniteTiles" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Al3-qi-wKs"/>
+                        <viewControllerLayoutGuide type="bottom" id="8W5-Gf-24P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QvB-db-aS4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFQ-Rj-bFH">
+                                <rect key="frame" x="471" y="528" width="84" height="47"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Restart">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="restartButtonTapped:" destination="aZp-ru-Hd0" eventType="touchUpInside" id="kuG-P0-tZc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33i-qW-WfQ">
+                                <rect key="frame" x="45" y="528" width="62" height="47"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="aZp-ru-Hd0" eventType="touchUpInside" id="euh-62-jd3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdT-QY-mlC" userLabel="Best Score">
+                                <rect key="frame" x="219" y="45" width="164" height="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Da-TX-QVM" userLabel="Current Score">
+                                <rect key="frame" x="247" y="90" width="108" height="23"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPo-gG-qNO" customClass="GameBoardView" customModule="infiniteTiles" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="580" height="580"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hPo-gG-qNO" secondAttribute="height" multiplier="1:1" id="sl9-fI-bST"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="lXC-dN-phL" appends="YES" id="nFG-9k-1At"/>
+                                    <outletCollection property="gestureRecognizers" destination="fqX-ze-ChK" appends="YES" id="qBj-nx-mGe"/>
+                                    <outletCollection property="gestureRecognizers" destination="a5b-ij-xUC" appends="YES" id="Jef-jm-fuU"/>
+                                    <outletCollection property="gestureRecognizers" destination="68Z-wi-sIe" appends="YES" id="XaY-FV-f8d"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.20394736842105263" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8W5-Gf-24P" firstAttribute="top" secondItem="33i-qW-WfQ" secondAttribute="bottom" constant="25" id="IKv-wL-oP8"/>
+                            <constraint firstItem="33i-qW-WfQ" firstAttribute="leading" secondItem="QvB-db-aS4" secondAttribute="leadingMargin" constant="25" id="IQA-w5-pCb"/>
+                            <constraint firstItem="tdT-QY-mlC" firstAttribute="centerX" secondItem="QvB-db-aS4" secondAttribute="centerX" id="Nij-gA-whA"/>
+                            <constraint firstAttribute="trailing" secondItem="hPo-gG-qNO" secondAttribute="trailing" constant="10" id="P9w-Uj-7Rm"/>
+                            <constraint firstItem="8W5-Gf-24P" firstAttribute="top" secondItem="AFQ-Rj-bFH" secondAttribute="bottom" constant="25" id="fcD-Bl-5d7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AFQ-Rj-bFH" secondAttribute="trailing" constant="25" id="fzo-zX-gDY"/>
+                            <constraint firstItem="tdT-QY-mlC" firstAttribute="top" secondItem="Al3-qi-wKs" secondAttribute="bottom" constant="25" id="hXF-u0-zQj"/>
+                            <constraint firstItem="8Da-TX-QVM" firstAttribute="top" secondItem="tdT-QY-mlC" secondAttribute="bottom" constant="10" id="mfZ-QS-Idb"/>
+                            <constraint firstItem="hPo-gG-qNO" firstAttribute="leading" secondItem="QvB-db-aS4" secondAttribute="leading" constant="10" id="rhQ-d3-zAb"/>
+                            <constraint firstItem="hPo-gG-qNO" firstAttribute="centerY" secondItem="QvB-db-aS4" secondAttribute="centerY" id="uhP-O1-0Ay"/>
+                            <constraint firstItem="8Da-TX-QVM" firstAttribute="centerX" secondItem="QvB-db-aS4" secondAttribute="centerX" id="ymh-02-G8o"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bestScoreLabel" destination="tdT-QY-mlC" id="MRP-hB-jda"/>
+                        <outlet property="currentScoreLabel" destination="8Da-TX-QVM" id="XA4-oF-inQ"/>
+                        <outlet property="gameBoardView" destination="hPo-gG-qNO" id="H2B-DF-NUv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jNN-sP-Twn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="lXC-dN-phL">
+                    <connections>
+                        <action selector="swipeGestureRecognized:" destination="aZp-ru-Hd0" id="5Pz-0e-cFb"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="fqX-ze-ChK">
+                    <connections>
+                        <action selector="swipeGestureRecognized:" destination="aZp-ru-Hd0" id="Sr0-ul-YPN"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="a5b-ij-xUC">
+                    <connections>
+                        <action selector="swipeGestureRecognized:" destination="aZp-ru-Hd0" id="8c9-bX-aCy"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="68Z-wi-sIe">
+                    <connections>
+                        <action selector="swipeGestureRecognized:" destination="aZp-ru-Hd0" id="PHB-TT-P7C"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1119" y="479"/>
+        </scene>
+    </scenes>
+</document>
